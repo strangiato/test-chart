@@ -1,0 +1,7 @@
+nameOverride: ""
+fullnameOverride: ""
+
+topLevelValue: "hello"
+
+namespace:
+  nameSuffix: one
