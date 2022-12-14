@@ -31,10 +31,10 @@ Create chart name and version as used by the chart label.
 {{- end }}
 
 {{- define "test-chart.test" -}}
-{{- $.Values.topLevelValue | trunc 63 | trimSuffix "-" }}
+{{- .Values.topLevelValue | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{- define "test-chart.namespace-name" -}}
-{{- $fullname := include "test-chart.test" $ }}
-{{- printf "%s-%s"  $fullname .nameSuffix  }}
+{{- $fullname := include "test-chart.fullname" .context }}
+{{- printf "%s-%s"  $fullname .value.nameSuffix  }}
 {{- end }}
