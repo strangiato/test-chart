@@ -1,5 +1,7 @@
+{{- range $namespace := .Values.namespaces }}
+---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: {{ include "test-chart.namespace-name" .Values.namespace }}
-
+  name: {{ include "test-chart.namespace-name" $namespace }}
+{{- end }}

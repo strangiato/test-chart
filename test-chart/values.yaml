@@ -3,5 +3,6 @@ fullnameOverride: ""
 
 topLevelValue: "hello"
 
-namespace:
-  nameSuffix: one
+namespaces:
+  - nameSuffix: one
+  - nameSuffix: two
